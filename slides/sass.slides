@@ -196,8 +196,24 @@ h1. SASS Syntax - Advanced
 <div class="clear">
 </div>
 
-%::
+&::
 
 * conditionals, looping also supported
 
+h1. SASS - Installation & Usage
 
+* ruby gem @gem install haml@
+* rails plugin @haml --rails path/to/rails/app@
+&::
+* command line @sass input.sass output.css@
+* convert existing css to sass @css2sass input.css output.sass@
+
+h1. SASS
+
+<div class="left_column">
+:code code/sass/first.sass[lang=css]
+</div>
+
+<div class="floating_right_column">
+:code code/sass/first.css[lang=css]
+</div>

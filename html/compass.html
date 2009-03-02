@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>HAML & SASS</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="&date" />
+<meta name="author" content="Tobias Crawley" />
+<meta name="organization" content="&organization;" />
+<meta name="company" content=" " />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../lib/stylesheets/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+
+<link rel="stylesheet" href="../lib/stylesheets/pressie.css" type="text/css" />
+
+<!-- S5 JS -->
+<script src="../ui/default/slides.js" type="text/javascript"></script>
+
+<!-- Syntax Highlighter -->
+<link rel="stylesheet"  href="../dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h2>Copyright &copy; &copyright;</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>Compass is a <span class="caps">SASS</span> based stylesheet framework &#8211; <br />
+<a href="http://compass-style.org/">http://compass-style.org/</a></li>
+	<li>provides:
+	<ul>
+		<li>Blueprint &#8211; <a href="http://blueprintcss.org/">http://blueprintcss.org/</a></li>
+		<li><span class="caps">YUI</span> &#8211; <a href="http://developer.yahoo.com/yui/grids/">http://developer.yahoo.com/yui/grids/</a></li>
+		<li>960 &#8211; <a href="http://960.gs/">http://960.gs/</a></li>
+	</ul></li>
+</ul>
+</div>
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>uses mixins instead of classes to provide blueprint grid</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="html:nogutter:nocontrols">!bg_color = #fe23ad
+&lt;div id="content" class="container"&gt;
+  &lt;div id="navigation" class="column prepend-2 span-7"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;div id="main_content" class="column prepend-2 span-10 last"&gt;
+  ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+</div>
+</div>
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>uses mixins instead of classes to provide blueprint grid</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="html:nogutter:nocontrols">!bg_color = #fe23ad
+&lt;div id="content" class="container"&gt;
+  &lt;div id="navigation" class="column prepend-2 span-7"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;div id="main_content" class="column prepend-2 span-10 last"&gt;
+  ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+</div>
+<div class="floating_right_column">
+<div>
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">+blueprint
+
+#content
+  +container
+
+#navigation
+  +column(7)
+  +prepend(2)
+
+#main_content 
+  +column(10, true)            
+  +prepend(2)</pre></div>
+</div>
+<div>
+<div class="code-normal">
+<pre name="code" class="html:nogutter:nocontrols">!bg_color = #fe23ad
+&lt;div id="content"&gt;
+  &lt;div id="navigation"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;div id="main_content"&gt;
+  ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>hide complexity in mixins in other files, then \@import</li>
+</ul>
+<ul>
+	<li>keeps html content even cleaner</li>
+	<li>makes it easy to break style into multiple files/partials</li>
+	<li>sass is part of app</li>
+	<li></div></li>
+</ul>
+
+  <!-- Syntax Highlighter -->
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCSharp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCpp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushDelphi.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushJava.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushPhp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushPython.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushSql.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushVb.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+
+  <script language="javascript">
+  dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code');
+  </script>
+</div>
+</body>
+</html>

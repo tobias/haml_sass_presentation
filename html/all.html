@@ -98,6 +98,21 @@
 <p>Advantages:</p>
 </div>
 <div class="title slide">
+<h1>Intro</h1>
+<div class="left_column">
+<p><img src="../img/luke.png" alt="" /></p>
+</div>
+<ul>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets</li>
+</ul>
+<p>Advantages:</p>
+<p><a href="http://haml.hamptoncatlin.com/">http://haml.hamptoncatlin.com/</a></p>
+</div>
+<div class="title slide">
 <h1><span class="caps">HAML</span></h1>
 <div class="left_column">
 <div class="code-normal">
@@ -938,14 +953,217 @@ text</li>
 </div>
 <div class="clear">
 </div>
-<p>%::</p>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax &#8211; Advanced</h1>
+<ul>
+	<li>mixins can take arguments</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">=column(!span = 1)
+  :width = (100 * !span) "px"
+  :float left
+
+#far_left
+  +column
+
+#navigation
+  +column(3)
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/mixin_args.sass">code/sass/mixin_args.sass</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#far_left {
+  width: 100 px;
+  float: left;
+}
+
+#navigation {
+  width: 300 px;
+  float: left;
+}
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/mixin_args.css">code/sass/mixin_args.css</a></p>
+</div>
+</div>
+<div class="clear">
+</div>
 <ul>
 	<li>conditionals, looping also supported</li>
 </ul>
 </div>
+<div class="slide">
+<h1><span class="caps">SASS</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">SASS</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code></li>
+</ul>
+<ul>
+	<li>command line <code>sass input.sass output.css</code></li>
+	<li>convert existing css to sass <code>css2sass input.css output.sass</code></li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">/a silent comment
+!bg_color= #333
+
+=border_mixin
+  :border 1px solid #000
+
+#header
+  +border_mixin
+  :background-color= !bg_color
+  ul
+    :list-style-type none
+    a
+      :text-decoration none
+      :font
+        :family "Verdana"
+        :weight bold
+      &amp;:hover
+        :text-decoration underline
+      .ie6 &amp;
+        /* a loud comment
+        :font-weight normal
+
+#notice
+  +border_mixin
+  :background-color #a45563</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/first.sass">code/sass/first.sass</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">
+#header {
+  border: 1px solid #000;
+  background-color: #333333;
+}
+#header ul {
+  list-style-type: none;
+}
+#header ul a {
+  text-decoration: none;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+#header ul a:hover {
+  text-decoration: underline;
+}
+.ie6 #header ul a {
+  /* a loud comment */
+  font-weight: normal;
+}
+
+#notice {
+  border: 1px solid #000;
+  background-color: #a45563;
+}
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/first.css">code/sass/first.css</a></p>
+</div>
+</div>
+</div>
 <div class="title slide">
 <h1>Compass</h1>
+<ul>
+	<li>Compass is a <span class="caps">SASS</span> based stylesheet framework &#8211; <br />
+<a href="http://compass-style.org/">http://compass-style.org/</a></li>
+	<li>provides:
+	<ul>
+		<li>Blueprint &#8211; <a href="http://blueprintcss.org/">http://blueprintcss.org/</a></li>
+		<li><span class="caps">YUI</span> &#8211; <a href="http://developer.yahoo.com/yui/grids/">http://developer.yahoo.com/yui/grids/</a></li>
+		<li>960 &#8211; <a href="http://960.gs/">http://960.gs/</a></li>
+	</ul></li>
+</ul>
 </div>
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>uses mixins instead of classes to provide blueprint grid</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="html:nogutter:nocontrols">!bg_color = #fe23ad
+&lt;div id="content" class="container"&gt;
+  &lt;div id="navigation" class="column prepend-2 span-7"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;div id="main_content" class="column prepend-2 span-10 last"&gt;
+  ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+</div>
+</div>
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>uses mixins instead of classes to provide blueprint grid</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="html:nogutter:nocontrols">!bg_color = #fe23ad
+&lt;div id="content" class="container"&gt;
+  &lt;div id="navigation" class="column prepend-2 span-7"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;div id="main_content" class="column prepend-2 span-10 last"&gt;
+  ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+</div>
+<div class="floating_right_column">
+<div>
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">+blueprint
+
+#content
+  +container
+
+#navigation
+  +column(7)
+  +prepend(2)
+
+#main_content 
+  +column(10, true)            
+  +prepend(2)</pre></div>
+</div>
+<div>
+<div class="code-normal">
+<pre name="code" class="html:nogutter:nocontrols">!bg_color = #fe23ad
+&lt;div id="content"&gt;
+  &lt;div id="navigation"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;div id="main_content"&gt;
+  ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="slide">
+<h1>Compass</h1>
+<ul>
+	<li>hide complexity in mixins in other files, then \@import</li>
+</ul>
+<ul>
+	<li>keeps html content even cleaner</li>
+	<li>makes it easy to break style into multiple files/partials</li>
+	<li>sass is part of app</li>
+	<li></div></li>
+</ul>
 
   <!-- Syntax Highlighter -->
   <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>

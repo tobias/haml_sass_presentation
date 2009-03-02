@@ -451,10 +451,126 @@
 </div>
 <div class="clear">
 </div>
-<p>%::</p>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax &#8211; Advanced</h1>
 <ul>
-	<li>conditionals, looping also supported</div></li>
+	<li>mixins can take arguments</li>
 </ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">=column(!span = 1)
+  :width = (100 * !span) "px"
+  :float left
+
+#far_left
+  +column
+
+#navigation
+  +column(3)
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/mixin_args.sass">code/sass/mixin_args.sass</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#far_left {
+  width: 100 px;
+  float: left;
+}
+
+#navigation {
+  width: 300 px;
+  float: left;
+}
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/mixin_args.css">code/sass/mixin_args.css</a></p>
+</div>
+</div>
+<div class="clear">
+</div>
+<ul>
+	<li>conditionals, looping also supported</li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">SASS</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code></li>
+</ul>
+<ul>
+	<li>command line <code>sass input.sass output.css</code></li>
+	<li>convert existing css to sass <code>css2sass input.css output.sass</code></li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">/a silent comment
+!bg_color= #333
+
+=border_mixin
+  :border 1px solid #000
+
+#header
+  +border_mixin
+  :background-color= !bg_color
+  ul
+    :list-style-type none
+    a
+      :text-decoration none
+      :font
+        :family "Verdana"
+        :weight bold
+      &amp;:hover
+        :text-decoration underline
+      .ie6 &amp;
+        /* a loud comment
+        :font-weight normal
+
+#notice
+  +border_mixin
+  :background-color #a45563</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/first.sass">code/sass/first.sass</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">
+#header {
+  border: 1px solid #000;
+  background-color: #333333;
+}
+#header ul {
+  list-style-type: none;
+}
+#header ul a {
+  text-decoration: none;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+#header ul a:hover {
+  text-decoration: underline;
+}
+.ie6 #header ul a {
+  /* a loud comment */
+  font-weight: normal;
+}
+
+#notice {
+  border: 1px solid #000;
+  background-color: #a45563;
+}
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass_presentation/code/sass/first.css">code/sass/first.css</a></p>
+</div>
+<p></div></p>
+</div>
 
   <!-- Syntax Highlighter -->
   <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>

@@ -1,3 +1,85 @@
 h1. Compass
 
+* Compass is a SASS based stylesheet framework - 
+"http://compass-style.org/":http://compass-style.org/
+* provides:
+** Blueprint - "http://blueprintcss.org/":http://blueprintcss.org/
+** YUI - "http://developer.yahoo.com/yui/grids/":http://developer.yahoo.com/yui/grids/
+** 960 - "http://960.gs/":http://960.gs/
+
+h1. Compass
+
+* uses mixins instead of classes to provide blueprint grid
+
+<div class="left_column indent">
+:inlinecode[lang=html]
+!bg_color = #fe23ad
+<div id="content" class="container">
+  <div id="navigation" class="column prepend-2 span-7">
+  ...
+  </div>
+  <div id="main_content" class="column prepend-2 span-10 last">
+  ...
+  </div>
+</div>
+:end
+</div>
+
+&::
+
+<div class="floating_right_column">
+<div>
+:inlinecode[lang=css]
++blueprint
+
+#content
+  +container
+
+#navigation
+  +column(7)
+  +prepend(2)
+
+#main_content 
+  +column(10, true)            
+  +prepend(2)
+:end
+</div>
+<div>
+:inlinecode[lang=html]
+!bg_color = #fe23ad
+<div id="content">
+  <div id="navigation">
+  ...
+  </div>
+  <div id="main_content">
+  ...
+  </div>
+</div>
+:end
+</div>
+</div>
+
+<div class="clear">
+</div>
+
+h1. Compass
+
+* utility mixins: @+sticky-footer(height)@, @+clearfix@, @+tag-cloud@, @+hover-link@, @+link-colors(normal[, hover, active, visited, focus])@, many others
+"http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module":http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module
+
+h1. Compass - Installation & Usage w/Rails
+
+* install the edge version of HAML
+* install compass: @sudo gem install --source http://gems.github.com/ chriseppstein-compass@
+* hamlify your rails app: @ haml --rails path/to/app@
+* compassify your rails app: @compass --rails -f blueprint path/to/app@
+
+&::
+
+* sass stylesheets are stored by default in @app/stylesheets@, and compiled to @public/stylesheets/compiled@
+* compilation is handled on app load in production
+
+&::
+
+* "http://compass-style.org/":http://compass-style.org/
 
