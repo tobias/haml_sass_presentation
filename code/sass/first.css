@@ -1,0 +1,25 @@
+
+#header {
+  border: 1px solid #000;
+  background-color: #333333;
+}
+#header ul {
+  list-style-type: none;
+}
+#header ul a {
+  text-decoration: none;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+#header ul a:hover {
+  text-decoration: underline;
+}
+.ie6 #header ul a {
+  /* a loud comment */
+  font-weight: normal;
+}
+
+#notice {
+  border: 1px solid #000;
+  background-color: #a45563;
+}

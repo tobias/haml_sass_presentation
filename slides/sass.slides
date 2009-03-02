@@ -1,0 +1,143 @@
+h1. SASS
+
+<div class="left_column">
+:code code/sass/first.sass[lang=css]
+</div>
+
+&::
+
+<div class="floating_right_column">
+:code code/sass/first.css[lang=css]
+</div>
+
+
+
+
+h1. SASS Syntax
+
+* basic sass 
+
+<div class="left_column indent">
+:inlinecode[lang=css]
+#header, #footer
+  :background-color #333
+  :margin 5px 10px 3px 1px
+:end
+</div>
+
+<div class="floating_right_column">
+:inlinecode[lang=css]
+#header, #footer {
+  background-color: #333;
+  margin: 5px 10px 3px 1px;
+}
+:end
+</div>
+
+<div class="clear">
+</div>
+
+&::
+* nesting
+
+<div class="left_column indent">
+:inlinecode[lang=css]
+#header
+  :background-color #333
+  ul
+    :list-style-type none
+    a
+      :text-decoration none
+:end
+</div>
+
+<div class="floating_right_column">
+:inlinecode[lang=css]
+#header {
+  background-color: #333333;
+}
+#header ul {
+  list-style-type: none;
+}
+#header ul a {
+  text-decoration: none;
+}
+:end
+</div>
+
+<div class="clear">
+</div>
+
+h1. SASS Syntax
+
+* parent selector reference
+
+<div class="left_column indent">
+:inlinecode[lang=css]
+#header a
+  :text-decoration none
+  &:hover
+    :text-decoration underline
+  .ie6 & 
+    :display none
+:end
+</div>
+
+<div class="floating_right_column">
+:inlinecode[lang=css]
+#header a {
+  text-decoration: none;
+}
+#header a:hover {
+  text-decoration: underline;
+}
+.ie6 #header a {
+  display: none;
+}
+:end
+</div>
+
+<div class="clear">
+</div>
+
+&::
+
+* attribute namespaces
+
+<div class="left_column indent">
+:inlinecode[lang=css]
+#header a
+  :font
+    :family "Verdana"
+    :size 1.2em
+    :weight bold
+:end
+</div>
+
+<div class="floating_right_column">
+:inlinecode[lang=css]
+#header a {
+  font-family: "Verdana";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+:end
+</div>
+
+<div class="clear">
+</div>
+
+h1. SASS Syntax
+
+* comments (silent, loud)
+** silent comments show in the sass only, and are marked with @/@
+** loud comments convert to comments in the css output, and are marked
+   with @/*@
+
+
+* constants (arithmetic, optional assignment)
+* comments (silent, loud)
+* mixins
+* advanced (mixin args, conditionals, looping)
+
+

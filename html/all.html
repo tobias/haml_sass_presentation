@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>HAML & SASS</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="&date" />
+<meta name="author" content="Tobias Crawley" />
+<meta name="organization" content="&organization;" />
+<meta name="company" content=" " />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../lib/stylesheets/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+
+<link rel="stylesheet" href="../lib/stylesheets/pressie.css" type="text/css" />
+
+<!-- S5 JS -->
+<script src="../ui/default/slides.js" type="text/javascript"></script>
+
+<!-- Syntax Highlighter -->
+<link rel="stylesheet"  href="../dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h2>Copyright &copy; &copyright;</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+<div class="slide">
+<h1><span class="caps">HAML</span> &amp; <span class="caps">SASS</span></h1>
+<blockquote>
+<p>Tobias Crawley</p>
+</blockquote>
+</div>
+<div class="slide">
+<h1>Contents</h1>
+<div style="font-size: 70%">
+<ul>
+	<li>Intro</li>
+</ul>
+<ul>
+	<li><span class="caps">HAML</span></li>
+</ul>
+<ul>
+	<li><span class="caps">SASS</span></li>
+</ul>
+<ul>
+	<li>Compass</li>
+</ul>
+</div>
+</div>
+<div class="title slide">
+<h1>Intro</h1>
+<div class="left_column">
+<p><img src="../img/luke.png" alt="" /></p>
+</div>
+</div>
+<div class="title slide">
+<h1>Intro</h1>
+<div class="left_column">
+<p><img src="../img/luke.png" alt="" /></p>
+</div>
+<ul>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language</li>
+</ul>
+<p>Advantages:</p>
+</div>
+<div class="title slide">
+<h1>Intro</h1>
+<div class="left_column">
+<p><img src="../img/luke.png" alt="" /></p>
+</div>
+<ul>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets</li>
+</ul>
+<p>Advantages:</p>
+</div>
+<div class="title slide">
+<h1><span class="caps">HAML</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">!!!
+%html
+  %head
+    %meta{'http-equiv' =&gt; 'Content-Type', :content =&gt; 'text/html'}
+    %title A HAML Example
+  %body{:class =&gt; 'a_class'}
+    /a comment
+    #content
+      %h1 Some Items
+      %p
+        Here is some text.
+      %hr
+      %ul#items.list
+        %li.item Item 1
+        %li.item
+          Item 2 is
+          multiline.
+      
+          
+          </pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/first.haml">code/haml/first.haml</a></p>
+</div>
+</div>
+</div>
+<div class="title slide">
+<h1><span class="caps">HAML</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">!!!
+%html
+  %head
+    %meta{'http-equiv' =&gt; 'Content-Type', :content =&gt; 'text/html'}
+    %title A HAML Example
+  %body{:class =&gt; 'a_class'}
+    /a comment
+    #content
+      %h1 Some Items
+      %p
+        Here is some text.
+      %hr
+      %ul#items.list
+        %li.item Item 1
+        %li.item
+          Item 2 is
+          multiline.
+      
+          
+          </pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/first.haml">code/haml/first.haml</a></p>
+</div>
+</div>
+<div class="right_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta content='text/html' http-equiv='Content-Type' /&gt;
+    &lt;title&gt;A HAML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body class='a_class'&gt;
+    &lt;!-- a comment --&gt;
+    &lt;div id='content'&gt;
+      &lt;h1&gt;Some Items&lt;/h1&gt;
+      &lt;p&gt;
+        Here is some text.
+      &lt;/p&gt;
+      &lt;hr /&gt;
+      &lt;ul class='list' id='items'&gt;
+        &lt;li class='item'&gt;Item 1&lt;/li&gt;
+        &lt;li class='item'&gt;
+          Item 2 is
+          multiline.
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/first.html">code/haml/first.html</a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>content is nested by two spaces (like <span class="caps">YAML</span>, SASS), no closing tags<br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>content is nested by two spaces (like <span class="caps">YAML</span>, SASS), no closing tags</li>
+</ul>
+<ul>
+	<li><code>%element</code> &#8211; creates an html element (<code>%td</code> &#8594; <code>&lt;td&gt;</code>, <code>%div</code> &#8594; <code>&lt;div&gt;</code>)<br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>content is nested by two spaces (like <span class="caps">YAML</span>, SASS), no closing tags</li>
+</ul>
+<ul>
+	<li><code>%element</code> &#8211; creates an html element (<code>%td</code> &#8594; <code>&lt;td&gt;</code>, <code>%div</code> &#8594; <code>&lt;div&gt;</code>)</li>
+</ul>
+<ul>
+	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
+	<ul>
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id&gt;</code></li>
+		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
+		<li><code>#an_id.a_class</code> &#8594; <code>&lt;div id="an_id" class="a_class"&gt;</code><br />
+</div><br />
+<div class="slide"></li>
+	</ul></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>content is nested by two spaces (like <span class="caps">YAML</span>, SASS), no closing tags</li>
+</ul>
+<ul>
+	<li><code>%element</code> &#8211; creates an html element (<code>%td</code> &#8594; <code>&lt;td&gt;</code>, <code>%div</code> &#8594; <code>&lt;div&gt;</code>)</li>
+</ul>
+<ul>
+	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
+	<ul>
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id&gt;</code></li>
+		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
+		<li><code>#an_id.a_class</code> &#8594; <code>&lt;div id="an_id" class="a_class"&gt;</code></li>
+	</ul></li>
+</ul>
+<ul>
+	<li>attributes passed as ruby hash, with symbols or strings for keys<br />
+<code>%td{:class =&gt; 'odd'}</code> &#8594; <code>&lt;td class="odd"&gt;</code></li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>empty tags closed with a &#8216;/&#8217; (<code>%div/</code> &#8594; <code>&lt;div/&gt;</code>) (for tags that are always empty, the &#8216;/&#8217; is optional (<code>%br</code>, <code>%br/</code> &#8594; <code>&lt;br/&gt;</code>))<br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>empty tags closed with a &#8216;/&#8217; (<code>%div/</code> &#8594; <code>&lt;div/&gt;</code>) (for tags that are always empty, the &#8216;/&#8217; is optional (<code>%br</code>, <code>%br/</code> &#8594; <code>&lt;br/&gt;</code>))</li>
+</ul>
+<ul>
+	<li>any text that does not start with a processing symbol is treated as<br />
+text<br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>empty tags closed with a &#8216;/&#8217; (<code>%div/</code> &#8594; <code>&lt;div/&gt;</code>) (for tags that are always empty, the &#8216;/&#8217; is optional (<code>%br</code>, <code>%br/</code> &#8594; <code>&lt;br/&gt;</code>))</li>
+</ul>
+<ul>
+	<li>any text that does not start with a processing symbol is treated as<br />
+text</li>
+</ul>
+<ul>
+	<li>text content can be on same line or nested</li>
+</ul>
+<div class="indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">%h1 Same Line
+%p
+  Nested</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass"></a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>empty tags closed with a &#8216;/&#8217; (<code>%div/</code> &#8594; <code>&lt;div/&gt;</code>) (for tags that are always empty, the &#8216;/&#8217; is optional (<code>%br</code>, <code>%br/</code> &#8594; <code>&lt;br/&gt;</code>))</li>
+</ul>
+<ul>
+	<li>any text that does not start with a processing symbol is treated as<br />
+text</li>
+</ul>
+<ul>
+	<li>text content can be on same line or nested</li>
+</ul>
+<div class="indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">%h1 Same Line
+%p
+  Nested</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass"></a></p>
+</div>
+</div>
+<ul>
+	<li><code>!!!</code> is the <span class="caps">DTD</span>/prolog marker (default is xhtml 1.0)<br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>empty tags closed with a &#8216;/&#8217; (<code>%div/</code> &#8594; <code>&lt;div/&gt;</code>) (for tags that are always empty, the &#8216;/&#8217; is optional (<code>%br</code>, <code>%br/</code> &#8594; <code>&lt;br/&gt;</code>))</li>
+</ul>
+<ul>
+	<li>any text that does not start with a processing symbol is treated as<br />
+text</li>
+</ul>
+<ul>
+	<li>text content can be on same line or nested</li>
+</ul>
+<div class="indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">%h1 Same Line
+%p
+  Nested</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass"></a></p>
+</div>
+</div>
+<ul>
+	<li><code>!!!</code> is the <span class="caps">DTD</span>/prolog marker (default is xhtml 1.0)</li>
+</ul>
+<ul>
+	<li><code>/</code> comments a line, or the block indented below
+	<ul>
+		<li>supports IE conditional comments: <code>/[if IE]</code></li>
+	</ul></li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Ruby Integration</h1>
+<ul>
+	<li><code>= some_ruby_expression</code> &#8211; the expression is eval&#8217;ed and returned value is inserted into document</li>
+	<li>can be used on the same line as an element, or nested</li>
+</ul>
+<div class="indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">%h1= @page.title
+%p
+  = simple_format(@page.content)</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass"></a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Ruby Integration</h1>
+<ul>
+	<li><code>= some_ruby_expression</code> &#8211; the expression is eval&#8217;ed and returned value is inserted into document</li>
+	<li>can be used on the same line as an element, or nested</li>
+</ul>
+<div class="indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">%h1= @page.title
+%p
+  = simple_format(@page.content)</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass"></a></p>
+</div>
+</div>
+<ul>
+	<li><code>- some_ruby_expression</code> &#8211; the expression is eval&#8217;ed, with no output</li>
+</ul>
+<div class="indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">- page ||= @page
+%h1= page.title</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass"></a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Ruby Integration</h1>
+<ul>
+	<li>blocks and conditionals are nested like regular elements</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">- if @page.has_items?
+  %ul
+    - @page.items.each do |item|
+      %li= item.title
+
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/blocks.haml">code/haml/blocks.haml</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">&lt;% if @page.has_items? %&gt;
+  &lt;ul&gt;
+  &lt;% @page.items.each do |item| %&gt;
+    &lt;li&gt;&lt;%= item.title %&gt;&lt;/li&gt;
+  &lt;% end %&gt;
+  &lt;/ul&gt;
+&lt;% end %&gt;</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/blocks.erb">code/haml/blocks.erb</a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Filters</h1>
+<ul>
+	<li>filters start with <code>:</code>, and the indented block is processed by the<br />
+  named filter<br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Filters</h1>
+<ul>
+	<li>filters start with <code>:</code>, and the indented block is processed by the<br />
+  named filter</li>
+</ul>
+<ul>
+	<li>filters I commonly use: <code>:textile</code>, <code>:javascript</code>, <code>:sass</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Filters</h1>
+<ul>
+	<li>filters start with <code>:</code>, and the indented block is processed by the<br />
+  named filter</li>
+</ul>
+<ul>
+	<li>filters I commonly use: <code>:textile</code>, <code>:javascript</code>, <code>:sass</code></li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">:javascript
+  alert('ha!');
+:textile
+  This is *some* _textile_
+%style{:type =&gt; 'text/css'}
+  :sass
+    #header
+      :background-color #333</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/filters.haml">code/haml/filters.haml</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">&lt;script type='text/javascript'&gt;
+  //&lt;![CDATA[
+    alert('ha!');
+  //]]&gt;
+&lt;/script&gt;
+&lt;p&gt;This is &lt;strong&gt;some&lt;/strong&gt; &lt;em&gt;textile&lt;/em&gt;&lt;/p&gt;
+&lt;style type='text/css'&gt;
+  #header {
+    background-color: #333; }
+&lt;/style&gt;
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/filters.html">code/haml/filters.html</a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code></li>
+</ul>
+<ul>
+	<li>command line <code>haml input.haml output.html</code></li>
+	<li>convert existing html/erb to haml <code>html2haml input.html output.haml</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Installation &amp; Usage</h1>
+<ul>
+	<li>ruby gem <code>gem install haml</code></li>
+	<li>rails plugin <code>haml --rails path/to/rails/app</code></li>
+</ul>
+<ul>
+	<li>command line <code>haml input.haml output.html</code></li>
+	<li>convert existing html/erb to haml <code>html2haml input.html output.haml</code></li>
+</ul>
+<ul>
+	<li><span class="caps">HAML</span> for other languages
+	<ul>
+		<li><span class="caps">PHAML</span> (for PHP) &#8211; <a href="http://sourceforge.net/projects/phaml/">http://sourceforge.net/projects/phaml/</a></li>
+		<li><span class="caps">NHAML</span> (for .net) &#8211; <a href="http://code.google.com/p/nhaml/">http://code.google.com/p/nhaml/</a></li>
+	</ul></li>
+</ul>
+</div>
+<div class="slide">
+<h1><span class="caps">HAML</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">!!!
+%html
+  %head
+    %meta{'http-equiv' =&gt; 'Content-Type', :content =&gt; 'text/html'}
+    %title A HAML Example
+  %body{:class =&gt; 'a_class'}
+    /a comment
+    #content
+      %h1 Some Items
+      %p
+        Here is some text.
+      %hr
+      %ul#items.list
+        %li.item Item 1
+        %li.item
+          Item 2 is
+          multiline.
+      
+          
+          </pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/first.haml">code/haml/first.haml</a></p>
+</div>
+</div>
+<div class="right_column">
+<div class="code-normal">
+<pre name="code" class="ruby:nogutter:nocontrols">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta content='text/html' http-equiv='Content-Type' /&gt;
+    &lt;title&gt;A HAML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body class='a_class'&gt;
+    &lt;!-- a comment --&gt;
+    &lt;div id='content'&gt;
+      &lt;h1&gt;Some Items&lt;/h1&gt;
+      &lt;p&gt;
+        Here is some text.
+      &lt;/p&gt;
+      &lt;hr /&gt;
+      &lt;ul class='list' id='items'&gt;
+        &lt;li class='item'&gt;Item 1&lt;/li&gt;
+        &lt;li class='item'&gt;
+          Item 2 is
+          multiline.
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/haml/first.html">code/haml/first.html</a></p>
+</div>
+</div>
+</div>
+<div class="title slide">
+<h1><span class="caps">SASS</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">/a silent comment
+!bg_color= #333
+
+=border_mixin
+  :border 1px solid #000
+
+#header
+  +border_mixin
+  :background-color= !bg_color
+  ul
+    :list-style-type none
+    a
+      :text-decoration none
+      :font
+        :family "Verdana"
+        :weight bold
+      &amp;:hover
+        :text-decoration underline
+      .ie6 &amp;
+        /* a loud comment
+        :font-weight normal
+
+#notice
+  +border_mixin
+  :background-color #a45563</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/sass/first.sass">code/sass/first.sass</a></p>
+</div>
+</div>
+</div>
+<div class="title slide">
+<h1><span class="caps">SASS</span></h1>
+<div class="left_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">/a silent comment
+!bg_color= #333
+
+=border_mixin
+  :border 1px solid #000
+
+#header
+  +border_mixin
+  :background-color= !bg_color
+  ul
+    :list-style-type none
+    a
+      :text-decoration none
+      :font
+        :family "Verdana"
+        :weight bold
+      &amp;:hover
+        :text-decoration underline
+      .ie6 &amp;
+        /* a loud comment
+        :font-weight normal
+
+#notice
+  +border_mixin
+  :background-color #a45563</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/sass/first.sass">code/sass/first.sass</a></p>
+</div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">
+#header {
+  border: 1px solid #000;
+  background-color: #333333;
+}
+#header ul {
+  list-style-type: none;
+}
+#header ul a {
+  text-decoration: none;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+#header ul a:hover {
+  text-decoration: underline;
+}
+.ie6 #header ul a {
+  /* a loud comment */
+  font-weight: normal;
+}
+
+#notice {
+  border: 1px solid #000;
+  background-color: #a45563;
+}
+</pre><p></div><div class="codeurl"><a href="txmt://open?url=file:///Users/tobias/presentations/haml_sass/code/sass/first.css">code/sass/first.css</a></p>
+</div>
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax</h1>
+<ul>
+	<li>basic sass</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header, #footer
+  :background-color #333
+  :margin 5px 10px 3px 1px</pre></div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header, #footer {
+  background-color: #333;
+  margin: 5px 10px 3px 1px;
+}</pre></div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax</h1>
+<ul>
+	<li>basic sass</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header, #footer
+  :background-color #333
+  :margin 5px 10px 3px 1px</pre></div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header, #footer {
+  background-color: #333;
+  margin: 5px 10px 3px 1px;
+}</pre></div>
+</div>
+<div class="clear">
+</div>
+<ul>
+	<li>nesting</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header
+  :background-color #333
+  ul
+    :list-style-type none
+    a
+      :text-decoration none</pre></div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header {
+  background-color: #333333;
+}
+#header ul {
+  list-style-type: none;
+}
+#header ul a {
+  text-decoration: none;
+}</pre></div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax</h1>
+<ul>
+	<li>parent selector reference</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header a
+  :text-decoration none
+  &amp;:hover
+    :text-decoration underline
+  .ie6 &amp; 
+    :display none</pre></div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header a {
+  text-decoration: none;
+}
+#header a:hover {
+  text-decoration: underline;
+}
+.ie6 #header a {
+  display: none;
+}</pre></div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax</h1>
+<ul>
+	<li>parent selector reference</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header a
+  :text-decoration none
+  &amp;:hover
+    :text-decoration underline
+  .ie6 &amp; 
+    :display none</pre></div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header a {
+  text-decoration: none;
+}
+#header a:hover {
+  text-decoration: underline;
+}
+.ie6 #header a {
+  display: none;
+}</pre></div>
+</div>
+<div class="clear">
+</div>
+<ul>
+	<li>attribute namespaces</li>
+</ul>
+<div class="left_column indent">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header a
+  :font
+    :family "Verdana"
+    :size 1.2em
+    :weight bold</pre></div>
+</div>
+<div class="floating_right_column">
+<div class="code-normal">
+<pre name="code" class="css:nogutter:nocontrols">#header a {
+  font-family: "Verdana";
+  font-size: 1.2em;
+  font-weight: bold;
+}</pre></div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="slide">
+<h1><span class="caps">SASS</span> Syntax</h1>
+<ul>
+	<li>comments (silent, loud)
+	<ul>
+		<li>silent comments show in the sass only, and are marked with <code>/</code></li>
+		<li>loud comments convert to comments in the css output, and are marked<br />
+   with <code>/*</code></li>
+	</ul></li>
+</ul>
+<ul>
+	<li>constants (arithmetic, optional assignment)</li>
+	<li>comments (silent, loud)</li>
+	<li>mixins</li>
+	<li>advanced (mixin args, conditionals, looping)</li>
+</ul>
+</div>
+<div class="title slide">
+<h1>Compass</h1>
+</div>
+
+  <!-- Syntax Highlighter -->
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCSharp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCpp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushDelphi.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushJava.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushPhp.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushPython.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushSql.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushVb.js"></script>
+  <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+
+  <script language="javascript">
+  dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code');
+  </script>
+</div>
+</body>
+</html>

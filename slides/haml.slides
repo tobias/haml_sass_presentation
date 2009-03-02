@@ -1,0 +1,121 @@
+h1. HAML
+
+<div class="left_column">
+:code code/haml/first.haml
+</div>
+
+&::
+<div class="right_column">
+:code code/haml/first.html
+</div>
+
+h1. HAML - Syntax
+
+* content is nested by two spaces (like YAML, SASS), no closing tags
+&::
+* @%element@ - creates an html element (@%td@ -> @<td>@, @%div@ -> @<div>@)
+&::
+* @#id@ and @.class@ default to @div@ elements 
+** @#an_id@ -> @<div id="an_id>@
+** @.a_class@ -> @<div class="a_class">@
+** @#an_id.a_class@ -> @<div id="an_id" class="a_class">@
+&::
+* attributes passed as ruby hash, with symbols or strings for keys
+@%td{:class => 'odd'}@ -> @<td class="odd">@
+
+h1. HAML - Syntax
+
+* empty tags closed with a '/' (@%div/@ -> @<div/>@) (for tags that are always empty, the '/' is optional (@%br@, @%br/@ -> @<br/>@))
+&::
+* any text that does not start with a processing symbol is treated as
+text
+&::
+* text content can be on same line or nested
+
+<div class="indent">
+:inlinecode
+%h1 Same Line
+%p
+  Nested
+:end
+</div>
+
+&::
+* @!!!@ is the DTD/prolog marker (default is xhtml 1.0)
+&::
+* @/@ comments a line, or the block indented below
+** supports IE conditional comments: @/[if IE]@ 
+
+h1. HAML - Ruby Integration
+
+* @= some_ruby_expression@ - the expression is eval'ed and returned value is inserted into document
+* can be used on the same line as an element, or nested
+
+<div class="indent">
+:inlinecode
+%h1= @page.title
+%p
+  = simple_format(@page.content)
+:end
+</div>
+
+&::
+
+* @- some_ruby_expression@ - the expression is eval'ed, with no output
+
+<div class="indent">
+:inlinecode
+- page ||= @page
+%h1= page.title
+:end
+</div>
+
+h1. HAML - Ruby Integration
+
+* blocks and conditionals are nested like regular elements
+
+<div class="left_column indent">
+:code code/haml/blocks.haml
+</div>
+
+<div class="floating_right_column">
+:code code/haml/blocks.erb
+</div>
+
+h1. HAML - Filters
+
+* filters start with @:@, and the indented block is processed by the
+  named filter
+&::
+* filters I commonly use: @:textile@, @:javascript@, @:sass@
+&::
+<div class="left_column indent">
+:code code/haml/filters.haml
+</div>
+
+<div class="floating_right_column">
+:code code/haml/filters.html
+</div>
+
+h1. HAML - Installation & Usage
+
+* ruby gem @gem install haml@
+* rails plugin @haml --rails path/to/rails/app@
+&::
+* command line @haml input.haml output.html@
+* convert existing html/erb to haml @html2haml input.html output.haml@
+&::
+* HAML for other languages
+** PHAML (for PHP) - "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
+** NHAML (for .net) - "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
+
+h1. HAML
+
+<div class="left_column">
+:code code/haml/first.haml
+</div>
+
+<div class="right_column">
+:code code/haml/first.html
+</div>
+

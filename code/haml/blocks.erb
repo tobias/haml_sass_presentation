@@ -1,0 +1,7 @@
+<% if @page.has_items? %>
+  <ul>
+  <% @page.items.each do |item| %>
+    <li><%= item.title %></li>
+  <% end %>
+  </ul>
+<% end %>

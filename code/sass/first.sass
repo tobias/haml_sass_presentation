@@ -1,0 +1,25 @@
+/a silent comment
+!bg_color= #333
+
+=border_mixin
+  :border 1px solid #000
+
+#header
+  +border_mixin
+  :background-color= !bg_color
+  ul
+    :list-style-type none
+    a
+      :text-decoration none
+      :font
+        :family "Verdana"
+        :weight bold
+      &:hover
+        :text-decoration underline
+      .ie6 &
+        /* a loud comment
+        :font-weight normal
+
+#notice
+  +border_mixin
+  :background-color #a45563
