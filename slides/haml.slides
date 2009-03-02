@@ -75,7 +75,7 @@ h1. HAML - Ruby Integration
 * blocks and conditionals are nested like regular elements
 
 <div class="left_column indent">
-:code code/haml/blocks.haml
+:code code/haml/_blocks.haml
 </div>
 
 <div class="floating_right_column">

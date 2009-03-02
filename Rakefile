@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
-SLIDES_DIR = 'slides/'
-HTML_DIR   = 'html/'
+BASE = File.dirname(__FILE__)
+
+SLIDES_DIR = File.join(BASE, 'slides')
+HTML_DIR   = File.join(BASE, 'html')
+CODE_DIR = File.join(BASE, 'code')
+UI_DIR = File.join(BASE, 'ui/default')
+
 ALL_HTML   = File.join(HTML_DIR, "all.html")
 
 METADATA = File.join(SLIDES_DIR, "metadata.yml")
@@ -23,7 +28,7 @@ desc "Build the HTML slides from all the files slides/*.slides files"
 task :default => OUTPUT
 
 desc "Build all slides based on the contents of slides/table_of_contents.slides"
-task :all => [ 'tmp/', HTML_DIR, ALL_HTML, :remove_tmp ]
+task :all => [ :update_ui, :build_code, 'tmp/', HTML_DIR, ALL_HTML, :remove_tmp ]
 
 task ALL_HTML => 'tmp/almost_all.html' do
   sh "ruby bin/postprocess_all.rb tmp/almost_all.html >#{ALL_HTML}"
@@ -43,6 +48,33 @@ end
 
 file "html/" do
   mkdir "html"
+end
+
+task :update_ui do
+  Dir.chdir(UI_DIR) do
+    sh "sass pretty.sass pretty.css"
+  end
+end
+
+task :build_code => [:build_haml, :build_sass]
+
+task :build_haml do
+  Dir.chdir(File.join(CODE_DIR, 'haml/')) do
+    Dir.glob('*.haml').each do |file|
+      basename = File.basename(file, '.haml')
+      sh "haml #{file} #{basename}.html" unless basename =~ /^_/
+    end
+  end
+end
+
+
+task :build_sass do
+  Dir.chdir(File.join(CODE_DIR, 'sass/')) do
+    Dir.glob('*.sass').each do |file|
+      basename = File.basename(file, '.sass')
+      sh "sass --style expanded #{file} #{basename}.css" unless basename =~ /^_/
+    end
+  end
 end
 
 task :remove_tmp do

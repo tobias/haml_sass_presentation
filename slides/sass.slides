@@ -131,13 +131,73 @@ h1. SASS Syntax
 
 * comments (silent, loud)
 ** silent comments show in the sass only, and are marked with @/@
-** loud comments convert to comments in the css output, and are marked
-   with @/*@
+** loud comments convert to comments in the css output, and are marked with @/*@
+
+&::
+
+* constants can be assigned with @!constant = value@
 
 
-* constants (arithmetic, optional assignment)
-* comments (silent, loud)
-* mixins
-* advanced (mixin args, conditionals, looping)
+<div class="left_column indent">
+:inlinecode[lang=css]
+!bg_color = #fe23ad
+
+#header
+  :background-color = !bg_color
+  :color = !bg_color + 128
+:end
+</div>
+
+<div class="floating_right_column">
+:inlinecode[lang=css]
+#header {
+  background-color: #fe23ad;
+  color: #ffa3ff; 
+}
+:end
+</div>
+
+<div class="clear">
+</div>
+
+h1. SASS Syntax - Mixins
+
+* common attributes can be put into a mixin for reuse
+
+
+<div class="left_column indent">
+:code code/sass/mixins.sass[lang=css]
+</div>
+
+&::
+
+<div class="floating_right_column">
+:code code/sass/mixins.css[lang=css]
+</div>
+
+<div class="clear">
+</div>
+
+h1. SASS Syntax - Advanced
+
+* mixins can take arguments 
+
+
+<div class="left_column indent">
+:code code/sass/mixin_args.sass[lang=css]
+</div>
+
+&::
+
+<div class="floating_right_column">
+:code code/sass/mixin_args.css[lang=css]
+</div>
+
+<div class="clear">
+</div>
+
+%::
+
+* conditionals, looping also supported
 
 

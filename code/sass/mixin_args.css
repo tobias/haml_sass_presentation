@@ -1,0 +1,9 @@
+#far_left {
+  width: 100 px;
+  float: left;
+}
+
+#navigation {
+  width: 300 px;
+  float: left;
+}
