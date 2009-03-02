@@ -65,13 +65,14 @@ h1. Compass
 h1. Compass
 
 * utility mixins: @+sticky-footer(height)@, @+clearfix@, @+tag-cloud@, @+hover-link@, @+link-colors(normal[, hover, active, visited, focus])@, many others
+
 "http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module":http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module
 
 h1. Compass - Installation & Usage w/Rails
 
 * install the edge version of HAML
 * install compass: @sudo gem install --source http://gems.github.com/ chriseppstein-compass@
-* hamlify your rails app: @ haml --rails path/to/app@
+* hamlify your rails app: @haml --rails path/to/app@
 * compassify your rails app: @compass --rails -f blueprint path/to/app@
 
 &::
@@ -81,5 +82,5 @@ h1. Compass - Installation & Usage w/Rails
 
 &::
 
-* "http://compass-style.org/":http://compass-style.org/
+"http://compass-style.org/":http://compass-style.org/
 

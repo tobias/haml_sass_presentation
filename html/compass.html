@@ -9,7 +9,7 @@
 <meta name="generator" content="S5" />
 <meta name="version" content="S5 1.1" />
 <meta name="presdate" content="&date" />
-<meta name="author" content="Tobias Crawley" />
+<meta name="author" content="Tobias Crawley (tobias@handbuiltsoftware.com)" />
 <meta name="organization" content="&organization;" />
 <meta name="company" content=" " />
 <!-- configuration parameters -->
@@ -127,14 +127,46 @@
 <div class="slide">
 <h1>Compass</h1>
 <ul>
-	<li>hide complexity in mixins in other files, then \@import</li>
+	<li>utility mixins: <code>+sticky-footer(height)</code>, <code>+clearfix</code>, <code>+tag-cloud</code>, <code>+hover-link</code>, <code>+link-colors(normal[, hover, active, visited, focus])</code>, many others</li>
+</ul>
+<p><a href="http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module">http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module</a></p>
+</div>
+<div class="slide">
+<h1>Compass &#8211; Installation &amp; Usage w/Rails</h1>
+<ul>
+	<li>install the edge version of <span class="caps">HAML</span></li>
+	<li>install compass: <code>sudo gem install --source http://gems.github.com/ chriseppstein-compass</code></li>
+	<li>hamlify your rails app: <code>haml --rails path/to/app</code></li>
+	<li>compassify your rails app: <code>compass --rails -f blueprint path/to/app</code></li>
+</ul>
+</div>
+<div class="slide">
+<h1>Compass &#8211; Installation &amp; Usage w/Rails</h1>
+<ul>
+	<li>install the edge version of <span class="caps">HAML</span></li>
+	<li>install compass: <code>sudo gem install --source http://gems.github.com/ chriseppstein-compass</code></li>
+	<li>hamlify your rails app: <code>haml --rails path/to/app</code></li>
+	<li>compassify your rails app: <code>compass --rails -f blueprint path/to/app</code></li>
 </ul>
 <ul>
-	<li>keeps html content even cleaner</li>
-	<li>makes it easy to break style into multiple files/partials</li>
-	<li>sass is part of app</li>
-	<li></div></li>
+	<li>sass stylesheets are stored by default in <code>app/stylesheets</code>, and compiled to <code>public/stylesheets/compiled</code></li>
+	<li>compilation is handled on app load in production</li>
 </ul>
+</div>
+<div class="slide">
+<h1>Compass &#8211; Installation &amp; Usage w/Rails</h1>
+<ul>
+	<li>install the edge version of <span class="caps">HAML</span></li>
+	<li>install compass: <code>sudo gem install --source http://gems.github.com/ chriseppstein-compass</code></li>
+	<li>hamlify your rails app: <code>haml --rails path/to/app</code></li>
+	<li>compassify your rails app: <code>compass --rails -f blueprint path/to/app</code></li>
+</ul>
+<ul>
+	<li>sass stylesheets are stored by default in <code>app/stylesheets</code>, and compiled to <code>public/stylesheets/compiled</code></li>
+	<li>compilation is handled on app load in production</li>
+</ul>
+<p><a href="http://compass-style.org/">http://compass-style.org/</a></p>
+</div>
 
   <!-- Syntax Highlighter -->
   <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>

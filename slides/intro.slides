@@ -7,13 +7,18 @@ h1. Intro
 &::
 
 * HAML: XHTML Abstraction Markup Language
+** an alternative to handcrafted html/erb
+&::** reduces repetition
+** generates valid XHTML content
+** easy on the eyes
 
-Advantages:
 &::
 
 * SASS: Syntactically Awesome Style Sheets
+** an alternative to handcrafted css
+&::** reduces repetition
+** easy on the eyes
 
-Advantages:
 
 &::
 

@@ -16,12 +16,13 @@ h1. HAML - Syntax
 * @%element@ - creates an html element (@%td@ -> @<td>@, @%div@ -> @<div>@)
 &::
 * @#id@ and @.class@ default to @div@ elements 
-** @#an_id@ -> @<div id="an_id>@
+** @#an_id@ -> @<div id="an_id">@
 ** @.a_class@ -> @<div class="a_class">@
-** @#an_id.a_class@ -> @<div id="an_id" class="a_class">@
+&::
+* #id and .class aren't just for divs: @%span#an_id.class1.class2@ -> @<span id="an_id" class="class1 class2">@
 &::
 * attributes passed as ruby hash, with symbols or strings for keys
-@%td{:class => 'odd'}@ -> @<td class="odd">@
+@%style{'type' => 'text/css'}@ -> @<style type="text/css">@
 
 h1. HAML - Syntax
 
@@ -107,7 +108,7 @@ h1. HAML - Installation & Usage
 &::
 * HAML for other languages
 ** PHAML (for PHP) - "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
-** NHAML (for .net) - "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
+** NHAML (for .NET) - "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
 
 h1. HAML
 

@@ -9,7 +9,7 @@
 <meta name="generator" content="S5" />
 <meta name="version" content="S5 1.1" />
 <meta name="presdate" content="&date" />
-<meta name="author" content="Tobias Crawley" />
+<meta name="author" content="Tobias Crawley (tobias@handbuiltsoftware.com)" />
 <meta name="organization" content="&organization;" />
 <meta name="company" content=" " />
 <!-- configuration parameters -->
@@ -153,9 +153,8 @@
 <ul>
 	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
 	<ul>
-		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id&gt;</code></li>
-		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
-		<li><code>#an_id.a_class</code> &#8594; <code>&lt;div id="an_id" class="a_class"&gt;</code><br />
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id"&gt;</code></li>
+		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code><br />
 </div><br />
 <div class="slide"></li>
 	</ul></li>
@@ -170,14 +169,35 @@
 <ul>
 	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
 	<ul>
-		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id&gt;</code></li>
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id"&gt;</code></li>
 		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
-		<li><code>#an_id.a_class</code> &#8594; <code>&lt;div id="an_id" class="a_class"&gt;</code></li>
 	</ul></li>
 </ul>
 <ul>
+	<li>#id and .class aren&#8217;t just for divs: <code>%span#an_id.class1.class2</code> &#8594; <code>&lt;span id="an_id" class="class1 class2"&gt;</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>content is nested by two spaces (like <span class="caps">YAML</span>, SASS), no closing tags</li>
+</ul>
+<ul>
+	<li><code>%element</code> &#8211; creates an html element (<code>%td</code> &#8594; <code>&lt;td&gt;</code>, <code>%div</code> &#8594; <code>&lt;div&gt;</code>)</li>
+</ul>
+<ul>
+	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
+	<ul>
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id"&gt;</code></li>
+		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
+	</ul></li>
+</ul>
+<ul>
+	<li>#id and .class aren&#8217;t just for divs: <code>%span#an_id.class1.class2</code> &#8594; <code>&lt;span id="an_id" class="class1 class2"&gt;</code></li>
+</ul>
+<ul>
 	<li>attributes passed as ruby hash, with symbols or strings for keys<br />
-<code>%td{:class =&gt; 'odd'}</code> &#8594; <code>&lt;td class="odd"&gt;</code></li>
+<code>%style{'type' =&gt; 'text/css'}</code> &#8594; <code>&lt;style type="text/css"&gt;</code></li>
 </ul>
 </div>
 <div class="slide">
@@ -361,7 +381,7 @@ text</li>
 <div class="left_column indent">
 <div class="code-normal">
 <pre name="code" class="ruby:nogutter:nocontrols">:javascript
-  alert('ha!');
+  alert("Corvette Summer");
 :textile
   This is *some* _textile_
 %style{:type =&gt; 'text/css'}
@@ -374,7 +394,7 @@ text</li>
 <div class="code-normal">
 <pre name="code" class="ruby:nogutter:nocontrols">&lt;script type='text/javascript'&gt;
   //&lt;![CDATA[
-    alert('ha!');
+    alert("Corvette Summer");
   //]]&gt;
 &lt;/script&gt;
 &lt;p&gt;This is &lt;strong&gt;some&lt;/strong&gt; &lt;em&gt;textile&lt;/em&gt;&lt;/p&gt;
@@ -418,7 +438,7 @@ text</li>
 	<li><span class="caps">HAML</span> for other languages
 	<ul>
 		<li><span class="caps">PHAML</span> (for PHP) &#8211; <a href="http://sourceforge.net/projects/phaml/">http://sourceforge.net/projects/phaml/</a></li>
-		<li><span class="caps">NHAML</span> (for .net) &#8211; <a href="http://code.google.com/p/nhaml/">http://code.google.com/p/nhaml/</a></li>
+		<li><span class="caps">NHAML</span> (for .NET) &#8211; <a href="http://code.google.com/p/nhaml/">http://code.google.com/p/nhaml/</a></li>
 	</ul></li>
 </ul>
 </div>

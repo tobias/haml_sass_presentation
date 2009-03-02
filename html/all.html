@@ -9,7 +9,7 @@
 <meta name="generator" content="S5" />
 <meta name="version" content="S5 1.1" />
 <meta name="presdate" content="&date" />
-<meta name="author" content="Tobias Crawley" />
+<meta name="author" content="Tobias Crawley (tobias@handbuiltsoftware.com)" />
 <meta name="organization" content="&organization;" />
 <meta name="company" content=" " />
 <!-- configuration parameters -->
@@ -47,7 +47,7 @@
 <div class="slide">
 <h1><span class="caps">HAML</span> &amp; <span class="caps">SASS</span></h1>
 <blockquote>
-<p>Tobias Crawley</p>
+<p>Tobias Crawley (tobias@handbuiltsoftware.com)</p>
 </blockquote>
 </div>
 <div class="slide">
@@ -79,9 +79,26 @@
 <p><img src="../img/luke.png" alt="" /></p>
 </div>
 <ul>
-	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language</li>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language
+	<ul>
+		<li>an alternative to handcrafted html/erb<br />
+</div><br />
+<div class="slide"></li>
+	</ul></li>
 </ul>
-<p>Advantages:</p>
+<h1 class="slide0">Intro</h1>
+<div class="left_column">
+<p><img src="../img/luke.png" alt="" /></p>
+</div>
+<ul>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language
+	<ul>
+		<li>an alternative to handcrafted html/erb</li>
+		<li>reduces repetition</li>
+		<li>generates valid <span class="caps">XHTML</span> content</li>
+		<li>easy on the eyes</li>
+	</ul></li>
+</ul>
 </div>
 <div class="title slide">
 <h1>Intro</h1>
@@ -89,13 +106,43 @@
 <p><img src="../img/luke.png" alt="" /></p>
 </div>
 <ul>
-	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language</li>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language
+	<ul>
+		<li>an alternative to handcrafted html/erb</li>
+		<li>reduces repetition</li>
+		<li>generates valid <span class="caps">XHTML</span> content</li>
+		<li>easy on the eyes</li>
+	</ul></li>
 </ul>
-<p>Advantages:</p>
 <ul>
-	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets</li>
+	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets
+	<ul>
+		<li>an alternative to handcrafted css<br />
+</div><br />
+<div class="slide"></li>
+	</ul></li>
 </ul>
-<p>Advantages:</p>
+<h1 class="slide0">Intro</h1>
+<div class="left_column">
+<p><img src="../img/luke.png" alt="" /></p>
+</div>
+<ul>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language
+	<ul>
+		<li>an alternative to handcrafted html/erb</li>
+		<li>reduces repetition</li>
+		<li>generates valid <span class="caps">XHTML</span> content</li>
+		<li>easy on the eyes</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets
+	<ul>
+		<li>an alternative to handcrafted css</li>
+		<li>reduces repetition</li>
+		<li>easy on the eyes</li>
+	</ul></li>
+</ul>
 </div>
 <div class="title slide">
 <h1>Intro</h1>
@@ -103,13 +150,22 @@
 <p><img src="../img/luke.png" alt="" /></p>
 </div>
 <ul>
-	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language</li>
+	<li><span class="caps">HAML</span>: <span class="caps">XHTML</span> Abstraction Markup Language
+	<ul>
+		<li>an alternative to handcrafted html/erb</li>
+		<li>reduces repetition</li>
+		<li>generates valid <span class="caps">XHTML</span> content</li>
+		<li>easy on the eyes</li>
+	</ul></li>
 </ul>
-<p>Advantages:</p>
 <ul>
-	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets</li>
+	<li><span class="caps">SASS</span>: Syntactically Awesome Style Sheets
+	<ul>
+		<li>an alternative to handcrafted css</li>
+		<li>reduces repetition</li>
+		<li>easy on the eyes</li>
+	</ul></li>
 </ul>
-<p>Advantages:</p>
 <p><a href="http://haml.hamptoncatlin.com/">http://haml.hamptoncatlin.com/</a></p>
 </div>
 <div class="title slide">
@@ -221,9 +277,8 @@
 <ul>
 	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
 	<ul>
-		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id&gt;</code></li>
-		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
-		<li><code>#an_id.a_class</code> &#8594; <code>&lt;div id="an_id" class="a_class"&gt;</code><br />
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id"&gt;</code></li>
+		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code><br />
 </div><br />
 <div class="slide"></li>
 	</ul></li>
@@ -238,14 +293,35 @@
 <ul>
 	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
 	<ul>
-		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id&gt;</code></li>
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id"&gt;</code></li>
 		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
-		<li><code>#an_id.a_class</code> &#8594; <code>&lt;div id="an_id" class="a_class"&gt;</code></li>
 	</ul></li>
 </ul>
 <ul>
+	<li>#id and .class aren&#8217;t just for divs: <code>%span#an_id.class1.class2</code> &#8594; <code>&lt;span id="an_id" class="class1 class2"&gt;</code><br />
+</div><br />
+<div class="slide"></li>
+</ul>
+<h1><span class="caps">HAML</span> &#8211; Syntax</h1>
+<ul>
+	<li>content is nested by two spaces (like <span class="caps">YAML</span>, SASS), no closing tags</li>
+</ul>
+<ul>
+	<li><code>%element</code> &#8211; creates an html element (<code>%td</code> &#8594; <code>&lt;td&gt;</code>, <code>%div</code> &#8594; <code>&lt;div&gt;</code>)</li>
+</ul>
+<ul>
+	<li><code>#id</code> and <code>.class</code> default to <code>div</code> elements
+	<ul>
+		<li><code>#an_id</code> &#8594; <code>&lt;div id="an_id"&gt;</code></li>
+		<li><code>.a_class</code> &#8594; <code>&lt;div class="a_class"&gt;</code></li>
+	</ul></li>
+</ul>
+<ul>
+	<li>#id and .class aren&#8217;t just for divs: <code>%span#an_id.class1.class2</code> &#8594; <code>&lt;span id="an_id" class="class1 class2"&gt;</code></li>
+</ul>
+<ul>
 	<li>attributes passed as ruby hash, with symbols or strings for keys<br />
-<code>%td{:class =&gt; 'odd'}</code> &#8594; <code>&lt;td class="odd"&gt;</code></li>
+<code>%style{'type' =&gt; 'text/css'}</code> &#8594; <code>&lt;style type="text/css"&gt;</code></li>
 </ul>
 </div>
 <div class="slide">
@@ -429,7 +505,7 @@ text</li>
 <div class="left_column indent">
 <div class="code-normal">
 <pre name="code" class="ruby:nogutter:nocontrols">:javascript
-  alert('ha!');
+  alert("Corvette Summer");
 :textile
   This is *some* _textile_
 %style{:type =&gt; 'text/css'}
@@ -442,7 +518,7 @@ text</li>
 <div class="code-normal">
 <pre name="code" class="ruby:nogutter:nocontrols">&lt;script type='text/javascript'&gt;
   //&lt;![CDATA[
-    alert('ha!');
+    alert("Corvette Summer");
   //]]&gt;
 &lt;/script&gt;
 &lt;p&gt;This is &lt;strong&gt;some&lt;/strong&gt; &lt;em&gt;textile&lt;/em&gt;&lt;/p&gt;
@@ -486,7 +562,7 @@ text</li>
 	<li><span class="caps">HAML</span> for other languages
 	<ul>
 		<li><span class="caps">PHAML</span> (for PHP) &#8211; <a href="http://sourceforge.net/projects/phaml/">http://sourceforge.net/projects/phaml/</a></li>
-		<li><span class="caps">NHAML</span> (for .net) &#8211; <a href="http://code.google.com/p/nhaml/">http://code.google.com/p/nhaml/</a></li>
+		<li><span class="caps">NHAML</span> (for .NET) &#8211; <a href="http://code.google.com/p/nhaml/">http://code.google.com/p/nhaml/</a></li>
 	</ul></li>
 </ul>
 </div>
@@ -1156,14 +1232,46 @@ text</li>
 <div class="slide">
 <h1>Compass</h1>
 <ul>
-	<li>hide complexity in mixins in other files, then \@import</li>
+	<li>utility mixins: <code>+sticky-footer(height)</code>, <code>+clearfix</code>, <code>+tag-cloud</code>, <code>+hover-link</code>, <code>+link-colors(normal[, hover, active, visited, focus])</code>, many others</li>
+</ul>
+<p><a href="http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module">http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module</a></p>
+</div>
+<div class="slide">
+<h1>Compass &#8211; Installation &amp; Usage w/Rails</h1>
+<ul>
+	<li>install the edge version of <span class="caps">HAML</span></li>
+	<li>install compass: <code>sudo gem install --source http://gems.github.com/ chriseppstein-compass</code></li>
+	<li>hamlify your rails app: <code>haml --rails path/to/app</code></li>
+	<li>compassify your rails app: <code>compass --rails -f blueprint path/to/app</code></li>
+</ul>
+</div>
+<div class="slide">
+<h1>Compass &#8211; Installation &amp; Usage w/Rails</h1>
+<ul>
+	<li>install the edge version of <span class="caps">HAML</span></li>
+	<li>install compass: <code>sudo gem install --source http://gems.github.com/ chriseppstein-compass</code></li>
+	<li>hamlify your rails app: <code>haml --rails path/to/app</code></li>
+	<li>compassify your rails app: <code>compass --rails -f blueprint path/to/app</code></li>
 </ul>
 <ul>
-	<li>keeps html content even cleaner</li>
-	<li>makes it easy to break style into multiple files/partials</li>
-	<li>sass is part of app</li>
-	<li></div></li>
+	<li>sass stylesheets are stored by default in <code>app/stylesheets</code>, and compiled to <code>public/stylesheets/compiled</code></li>
+	<li>compilation is handled on app load in production</li>
 </ul>
+</div>
+<div class="slide">
+<h1>Compass &#8211; Installation &amp; Usage w/Rails</h1>
+<ul>
+	<li>install the edge version of <span class="caps">HAML</span></li>
+	<li>install compass: <code>sudo gem install --source http://gems.github.com/ chriseppstein-compass</code></li>
+	<li>hamlify your rails app: <code>haml --rails path/to/app</code></li>
+	<li>compassify your rails app: <code>compass --rails -f blueprint path/to/app</code></li>
+</ul>
+<ul>
+	<li>sass stylesheets are stored by default in <code>app/stylesheets</code>, and compiled to <code>public/stylesheets/compiled</code></li>
+	<li>compilation is handled on app load in production</li>
+</ul>
+<p><a href="http://compass-style.org/">http://compass-style.org/</a></p>
+</div>
 
   <!-- Syntax Highlighter -->
   <script language="javascript" src="../dp.SyntaxHighlighter/Scripts/shCore.js"></script>
