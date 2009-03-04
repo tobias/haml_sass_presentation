@@ -4,7 +4,7 @@ h1. SASS
 :code code/sass/first.sass[lang=css]
 </div>
 
-&::
+<<
 
 <div class="floating_right_column">
 :code code/sass/first.css[lang=css]
@@ -37,7 +37,7 @@ h1. SASS Syntax
 <div class="clear">
 </div>
 
-&::
+<<
 * nesting
 
 <div class="left_column indent">
@@ -100,7 +100,7 @@ h1. SASS Syntax
 <div class="clear">
 </div>
 
-&::
+<<
 
 * attribute namespaces
 
@@ -133,7 +133,7 @@ h1. SASS Syntax
 ** silent comments show in the sass only, and are marked with @/@
 ** loud comments convert to comments in the css output, and are marked with @/*@
 
-&::
+<<
 
 * constants can be assigned with @!constant = value@
 
@@ -169,7 +169,7 @@ h1. SASS Syntax - Mixins
 :code code/sass/mixins.sass[lang=css]
 </div>
 
-&::
+<<
 
 <div class="floating_right_column">
 :code code/sass/mixins.css[lang=css]
@@ -187,7 +187,7 @@ h1. SASS Syntax - Advanced
 :code code/sass/mixin_args.sass[lang=css]
 </div>
 
-&::
+<<
 
 <div class="floating_right_column">
 :code code/sass/mixin_args.css[lang=css]
@@ -196,7 +196,7 @@ h1. SASS Syntax - Advanced
 <div class="clear">
 </div>
 
-&::
+<<
 
 * conditionals, looping also supported
 
@@ -204,7 +204,7 @@ h1. SASS - Installation & Usage
 
 * ruby gem @gem install haml@
 * rails plugin @haml --rails path/to/rails/app@
-&::
+<<
 * command line @sass input.sass output.css@
 * convert existing css to sass @css2sass input.css output.sass@
 

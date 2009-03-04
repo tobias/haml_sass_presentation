@@ -238,21 +238,18 @@ img.incremental {
   visibility: hidden; }
 
 .left_column {
-  width: 500px;
+  width: 450px;
   float: left;
-  margin-right: 25px; }
+  margin-right: 5px; }
 
 .floating_right_column {
-  width: 500px;
+  width: 450px;
   float: left; }
 
 .right_column {
   position: absolute;
   left: 545px;
   top: 30px; }
-
-.indent {
-  margin-left: 80px; }
 
 .clear {
   clear: both; }

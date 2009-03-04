@@ -25,7 +25,7 @@ h1. Compass
 :end
 </div>
 
-&::
+<<
 
 <div class="floating_right_column">
 <div>
@@ -68,19 +68,26 @@ h1. Compass
 
 "http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module":http://wiki.github.com/chriseppstein/compass/compass-core-utilities-module
 
-h1. Compass - Installation & Usage w/Rails
+h1. Compass - Rails Integration
 
 * install the edge version of HAML
 * install compass: @sudo gem install --source http://gems.github.com/ chriseppstein-compass@
 * hamlify your rails app: @haml --rails path/to/app@
 * compassify your rails app: @compass --rails -f blueprint path/to/app@
 
-&::
+<<
 
 * sass stylesheets are stored by default in @app/stylesheets@, and compiled to @public/stylesheets/compiled@
 * compilation is handled on app load in production
 
-&::
+<<
 
 "http://compass-style.org/":http://compass-style.org/
 
+h1. Thanks!
+
+* HAML & SASS: "http://haml.hamptoncatlin.com/":http://haml.hamptoncatlin.com/
+* PHAML (for PHP): "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
+* NHAML (for .NET): "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
+* Compass: "http://compass-style.org/":http://compass-style.org/
+* This presentation: "http://github.com/tobias/haml_sass_presentation.git":http://github.com/tobias/haml_sass_presentation

@@ -1,25 +1,25 @@
 h1. Intro
 
-<div class="left_column">
+<div class="left_column" style="margin-left: 100px">
 !../img/luke.png!
 </div>
 
-&::
+h1. Intro
 
 * HAML: XHTML Abstraction Markup Language
 ** an alternative to handcrafted html/erb
-&::** reduces repetition
+<<** reduces repetition
 ** generates valid XHTML content
 ** easy on the eyes
 
-&::
+<<
 
 * SASS: Syntactically Awesome Style Sheets
 ** an alternative to handcrafted css
-&::** reduces repetition
+<<** reduces repetition
 ** easy on the eyes
 
 
-&::
+<<
 
 "http://haml.hamptoncatlin.com/":http://haml.hamptoncatlin.com/
