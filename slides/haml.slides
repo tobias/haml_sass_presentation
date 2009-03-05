@@ -1,4 +1,4 @@
-h1. HAML
+h1. Haml
 
 <div class="left_column">
 :code code/haml/first.haml
@@ -9,9 +9,9 @@ h1. HAML
 :code code/haml/first.html
 </div>
 
-h1. HAML - Syntax
+h1. Haml - Syntax
 
-* content is nested by two spaces (like YAML, SASS), no closing tags
+* content is nested by two spaces (like YAML, Sass), no closing tags
 <<
 * @%element@ - creates an html element (@%td@ -> @<td>@, @%div@ -> @<div>@)
 <<
@@ -24,7 +24,7 @@ h1. HAML - Syntax
 * attributes passed as ruby hash, with symbols or strings for keys
 @%style{'type' => 'text/css'}@ -> @<style type="text/css">@
 
-h1. HAML - Syntax
+h1. Haml - Syntax
 
 * empty tags closed with a '/' (@%div/@ -> @<div/>@) (for tags that are always empty, the '/' is optional (@%br@, @%br/@ -> @<br/>@))
 <<
@@ -46,7 +46,7 @@ h1. HAML - Syntax
 * @/@ comments a line, or the block indented below
 ** supports IE conditional comments: @/[if IE]@ 
 
-h1. HAML - Ruby Integration
+h1. Haml - Ruby Integration
 
 * @= some_ruby_expression@ - the expression is eval'ed and returned value is inserted into document
 * can be used on the same line as an element, or nested
@@ -70,7 +70,7 @@ h1. HAML - Ruby Integration
 :end
 </div>
 
-h1. HAML - Ruby Integration
+h1. Haml - Ruby Integration
 
 * blocks and conditionals are nested like regular elements
 
@@ -82,7 +82,7 @@ h1. HAML - Ruby Integration
 :code code/haml/blocks.erb
 </div>
 
-h1. HAML - Filters
+h1. Haml - Filters
 
 * filters start with @:@, and the indented block is processed by the named filter
 <<
@@ -96,7 +96,7 @@ h1. HAML - Filters
 :code code/haml/filters.html
 </div>
 
-h1. HAML - Installation & Usage
+h1. Haml - Installation & Usage
 
 * ruby gem @gem install haml@
 * rails plugin @haml --rails path/to/rails/app@
@@ -104,11 +104,11 @@ h1. HAML - Installation & Usage
 * command line @haml input.haml output.html@
 * convert existing html/erb to haml @html2haml input.html output.haml@
 <<
-* HAML for other languages
-** PHAML (for PHP) - "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
-** NHAML (for .NET) - "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
+* Haml for other languages
+** PHaml (for PHP) - "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
+** NHaml (for .NET) - "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
 
-h1. HAML
+h1. Haml
 
 <div class="left_column">
 :code code/haml/first.haml

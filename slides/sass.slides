@@ -1,4 +1,4 @@
-h1. SASS
+h1. Sass
 
 <div class="left_column">
 :code code/sass/first.sass[lang=css]
@@ -13,7 +13,7 @@ h1. SASS
 
 
 
-h1. SASS Syntax
+h1. Sass Syntax
 
 * basic sass 
 
@@ -68,7 +68,7 @@ h1. SASS Syntax
 <div class="clear">
 </div>
 
-h1. SASS Syntax
+h1. Sass Syntax
 
 * parent selector reference
 
@@ -127,7 +127,7 @@ h1. SASS Syntax
 <div class="clear">
 </div>
 
-h1. SASS Syntax
+h1. Sass Syntax
 
 * comments (silent, loud)
 ** silent comments show in the sass only, and are marked with @/@
@@ -160,7 +160,7 @@ h1. SASS Syntax
 <div class="clear">
 </div>
 
-h1. SASS Syntax - Mixins
+h1. Sass Syntax - Mixins
 
 * common attributes can be put into a mixin for reuse
 
@@ -178,7 +178,7 @@ h1. SASS Syntax - Mixins
 <div class="clear">
 </div>
 
-h1. SASS Syntax - Advanced
+h1. Sass Syntax - Advanced
 
 * mixins can take arguments 
 
@@ -200,7 +200,7 @@ h1. SASS Syntax - Advanced
 
 * conditionals, looping also supported
 
-h1. SASS - Installation & Usage
+h1. Sass - Installation & Usage
 
 * ruby gem @gem install haml@
 * rails plugin @haml --rails path/to/rails/app@
@@ -208,7 +208,7 @@ h1. SASS - Installation & Usage
 * command line @sass input.sass output.css@
 * convert existing css to sass @css2sass input.css output.sass@
 
-h1. SASS
+h1. Sass
 
 <div class="left_column">
 :code code/sass/first.sass[lang=css]

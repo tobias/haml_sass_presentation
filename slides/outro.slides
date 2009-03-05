@@ -2,8 +2,8 @@ h1. Outro
 
 h2. Thanks!
 
-* HAML & SASS: "http://haml.hamptoncatlin.com/":http://haml.hamptoncatlin.com/
-* PHAML (for PHP): "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
-* NHAML (for .NET): "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
+* Haml & Sass: "http://haml.hamptoncatlin.com/":http://haml.hamptoncatlin.com/
+* PHaml (for PHP): "http://sourceforge.net/projects/phaml/":http://sourceforge.net/projects/phaml/
+* NHaml (for .NET): "http://code.google.com/p/nhaml/":http://code.google.com/p/nhaml/
 * Compass: "http://compass-style.org/":http://compass-style.org/
 * This presentation: "http://github.com/tobias/haml_sass_presentation.git":http://github.com/tobias/haml_sass_presentation

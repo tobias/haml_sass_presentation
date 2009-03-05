@@ -1,6 +1,6 @@
 h1. Compass
 
-* Compass is a SASS based stylesheet framework - 
+* Compass is a Sass based stylesheet framework - 
 "http://compass-style.org/":http://compass-style.org/
 * provides:
 ** Blueprint - "http://blueprintcss.org/":http://blueprintcss.org/
@@ -70,7 +70,7 @@ h1. Compass
 
 h1. Compass - Rails Integration
 
-* install the edge version of HAML
+* install the edge version of Haml
 * install compass: @sudo gem install --source http://gems.github.com/ chriseppstein-compass@
 * hamlify your rails app: @haml --rails path/to/app@
 * compassify your rails app: @compass --rails -f blueprint path/to/app@
