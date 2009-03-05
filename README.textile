@@ -1,5 +1,5 @@
 This presentation is built using a modified version
-"pragdave":http://github.com/pragdave/'s
+"pragdave's":http://github.com/pragdave/ 
 "codex":http://github.com/tobias/codex, and the built presentation
 can be viewed by pointing your browser at @html/all.html@.
 
